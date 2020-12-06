@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../Img/Bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+.banner #text
+{
+    position: relative;
+    font-size: 12em;
+    color: #722c2c;
+    z-index: 100;
+}
+.banner .clouds
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+.banner .clouds img
+{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(3s * var(--i)) linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: scale(1);
+    }
+    25%,75%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+section 
+{
+    position: relative;
+    padding: 100px 75px;
+}
+section h2
+{
+    position: relative;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+@media(max-width: 768px)
+{
+    .banner #text
+    {
+        font-size: 6.5em;
+    }
+    section
+    {
+        padding: 25px 10px;
+    }
+}
+@media(max-width: 425px)
+{
+    .banner #text
+    {
+        font-size: 4em;
+    }
+    section h2
+    {
+        font-size: 1.5em;
+    }
+}
